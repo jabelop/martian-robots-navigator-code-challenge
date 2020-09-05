@@ -5,31 +5,31 @@ const robot = (x,y,dir,world) => {
     let isLost = false;
     let robotworld = world;
     return {
-        getXPosition : () => {
+        getXPosition : function() {
             return xPosition;
         },
-        setXPosition : (newX) => {
+        setXPosition : function(newX) {
             xPosition = newX;
         },
-        getYPosition : () => {
+        getYPosition : function() {
             return yPosition;
         },
-        setYPosition : (newY) => {
+        setYPosition : function(newY) {
             yPosition = newY;
         },
-        getDirection : () => {
+        getDirection : function() {
             return direction;
         },
-        setDirection : (newDirection) => {
+        setDirection : function(newDirection) {
             direction = newDirection;
         },
-        losted : () => {
+        losted : function() {
             return isLost;
         },
-        setLost : (losted) => {
+        setLost : function(losted) {
             isLost = losted;
         },
-        rotateRobot: (rot) => {
+        rotateRobot: function(rot) {
             switch (rot){
                 case 'L':
                     if (this.getDirection() === 'N') {
@@ -62,7 +62,7 @@ const robot = (x,y,dir,world) => {
 
             }
         },
-        moveRobot : () => {
+        moveRobot : function() {
             switch (direction) {
                 case 'N':
                     if (this.getYPosition() +1 > robotworld.getTopY()) return false;
