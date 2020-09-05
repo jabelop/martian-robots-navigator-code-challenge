@@ -1,0 +1,19 @@
+{
+  "name": "martian_robots",
+  "version": "1.0.0",
+  "description": "martian robots navigate system",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "martian",
+    "robots",
+    "navigator"
+  ],
+  "author": "Julio Abejar",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^8.1.3"
+  }
+}
