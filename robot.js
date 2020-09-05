@@ -29,6 +29,39 @@ const robot = (x,y,dir,world) => {
         setLost : (losted) => {
             isLost = losted;
         },
+        rotateRobot: (rot) => {
+            switch (rot){
+                case 'L':
+                    if (this.getDirection() === 'N') {
+                        this.setDirection('W');
+                    }
+                    else if (this.getDirection() === 'E') {
+                        this.setDirection('N');
+                    }
+                    else if (this.getDirection() === 'S') {
+                        this.setDirection('E');
+                    }
+                    else if (this.getDirection() === 'W') {
+                        this.setDirection('S');
+                    }
+                    break;
+                case 'R':
+                    if (this.getDirection() === 'N') {
+                        this.setDirection('E');
+                    }
+                    else if (this.getDirection() === 'E') {
+                        this.setDirection('S');
+                    }
+                    else if (this.getDirection() === 'S') {
+                        this.setDirection('W');
+                    }
+                    else if (this.getDirection() === 'W') {
+                        this.setDirection('N');
+                    }
+                    break;
+
+            }
+        },
         moveRobot : () => {
             switch (direction) {
                 case 'N':
