@@ -1,4 +1,4 @@
-let robot = (topX,topY,lowX,lowY) => {
+const world = (topX,topY,lowX,lowY) => {
     let worldTopX = topX;
     let worldTopY = topY;
     let worldLowX = lowX;
@@ -19,3 +19,5 @@ let robot = (topX,topY,lowX,lowY) => {
         }, 
     }
 }
+
+module.exports = world;

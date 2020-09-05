@@ -1,4 +1,4 @@
-let robot = (x,y,dir,world) => {
+const robot = (x,y,dir,world) => {
     let xPosition = x;
     let yPosition = y;
     let direction = dir;
@@ -23,7 +23,7 @@ let robot = (x,y,dir,world) => {
         setDirection : (newDirection) => {
             direction = newDirection;
         },
-        lost? : () => {
+        losted : () => {
             return isLost;
         },
         setLost : (losted) => {
@@ -51,3 +51,4 @@ let robot = (x,y,dir,world) => {
         }
     }
 }
+module.exports = robot;
